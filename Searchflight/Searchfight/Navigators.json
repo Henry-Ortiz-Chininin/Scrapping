@@ -1,0 +1,14 @@
+[
+  {
+    "IdNavigator": "1",
+    "Name": "Bing",
+    "UrlBase": "https://www.bing.com/search?q={0}&qs=HS&sc=8-0&cvid=E8C90216F19A4D8C8AE9D3CBB35BEAF8&FORM=QBLH&sp=1",
+    "regexResult": "//*[@class='sb_count']"
+  },
+  {
+    "IdNavigator": "2",
+    "Name": "Yahoo",
+    "UrlBase": "https://pe.search.yahoo.com/search?p={0}&fr=yfp-t&fp=1&toggle=1&cop=mss&ei=UTF-8",
+    "regexResult": "//div[@class='compPagination']//span"
+  }
+]
