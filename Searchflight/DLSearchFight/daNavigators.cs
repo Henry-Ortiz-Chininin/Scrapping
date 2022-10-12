@@ -9,7 +9,6 @@ namespace DLSearchFight
 {
     public class daNavigators:iNavigators
     {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public daNavigators()
         {
 
@@ -27,7 +26,6 @@ namespace DLSearchFight
             }
             catch (Exception ex)
             {
-                log.Debug("Error: " + ex.InnerException.ToString());
                 return new List<entNavigator>();
             }
 

@@ -18,10 +18,7 @@ namespace SASearchFight
 
         public SearchEngine()
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<QueryTools>().As<iQueryTools>();
-            var container = builder.Build();
-            searchTools = container.Resolve<iQueryTools>();
+            searchTools = new QueryTools();
         }
 
         public List<entSearch> getResults(string query, List<entNavigator> oNavigators)

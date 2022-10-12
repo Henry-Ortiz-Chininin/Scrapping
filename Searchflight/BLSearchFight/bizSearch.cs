@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
 using ELSearchFight;
 using DLSearchFight;
 using SASearchFight;
@@ -19,15 +15,10 @@ namespace BLSearchFight
         protected iQueryTools queryTools;
         public bizSearch()
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<daNavigators>().As<iNavigators>();
-            builder.RegisterType<SearchEngine>().As<iSearchEngine>();
-            builder.RegisterType<QueryTools>().As<iQueryTools>();
-            var container = builder.Build();
 
-            navigators = container.Resolve<iNavigators>();
-            searchEngine = container.Resolve<iSearchEngine>();
-            queryTools = container.Resolve<iQueryTools>();
+            navigators = new daNavigators();
+            searchEngine = new SearchEngine();
+            queryTools = new QueryTools();
         }
 
         public List<entSearchTerm> getSearchResults(string[] sQuery)
